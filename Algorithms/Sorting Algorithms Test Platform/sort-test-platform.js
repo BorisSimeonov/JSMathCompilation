@@ -5,18 +5,21 @@ let bubbleSort = require('./Sorting Algorithms/bubble-sort');
 let selectionSort = require('./Sorting Algorithms/selection-sort');
 let insertionSort = require('./Sorting Algorithms/insertion-sort');
 let mergeSort = require('./Sorting Algorithms/merge-sort');
+let quickSort = require('./Sorting Algorithms/quicksort');
 //TODO: include Quicksort and Heap Sort
 
 let bubbleSortAlg = new SortAlgorithm('Bubble Sort', bubbleSort);
 let selectioneSortAlg = new SortAlgorithm('Selection Sort', selectionSort);
 let insertionSortAlg = new SortAlgorithm('Insertion Sort', insertionSort);
 let mergeSortAlg = new SortAlgorithm('Merge Sort', mergeSort);
+let quicksortAlg = new SortAlgorithm('Quicksort', quickSort);
 
 let controller = new SortController([
     bubbleSortAlg,
     selectioneSortAlg,
     insertionSortAlg,
-    mergeSortAlg
+    mergeSortAlg,
+    quicksortAlg
 ]);
 
 

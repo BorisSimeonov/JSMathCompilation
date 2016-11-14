@@ -1,17 +1,15 @@
-function insertionSort(array) {
-    let i, j, el,
-        len = array.length;
+function insertionSort(arr) {
+    let i, j, val;
 
-    for (i = 1; i < len; ++i) {
-        el = array[i];
-        j = i;
-        while (j > 0 && array[j - 1] > el) {
-            array[j - 1] = array[j];
-            --j;
+    for (i = 0; i < arr.length; ++i) {
+        val = arr[i];
+        j = i - 1;
+        for (; j > -1 && arr[j] > val; --j) {
+            arr[j + 1] = arr[j];
         }
-        array[j] = el;
+        arr[j + 1] = val;
     }
-    return array;
+    return arr;
 }
 
 module.exports = insertionSort;

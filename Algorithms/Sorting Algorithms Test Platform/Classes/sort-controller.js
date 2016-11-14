@@ -10,8 +10,9 @@ class SortController {
             sortedArray;
 
         for (let algorithm of this.algorithmsArray) {
+            let [...arrayCopy] = array;
             startTime = process.hrtime();
-            sortedArray = algorithm.execute(array);
+            sortedArray = algorithm.execute(arrayCopy);
             endTime = process.hrtime(startTime);
             results.push({
                 algorithmName: algorithm.name,
